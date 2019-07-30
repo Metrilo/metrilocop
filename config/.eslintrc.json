@@ -1,0 +1,22 @@
+{
+  "extends": "standard",
+  "rules": {
+    "max-len": [
+      "error",
+      {
+        "code": 100,
+        "ignoreComments": false,
+        "ignoreTrailingComments": false,
+        "ignoreStrings": false,
+        "ignoreTemplateLiterals": false,
+        "ignoreRegExpLiterals": false
+      }
+    ],
+    "comma-dangle": "off",
+    "indent": ["error", 2, {
+      "CallExpression": {
+        "arguments": "off"
+      }
+    }]
+  }
+}

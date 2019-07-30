@@ -1,0 +1,9 @@
+# This is the default configuration file. Enabling and disabling is configured
+# in separate files. This file adds all other parameters apart from Enabled.
+
+require: rubocop-rspec
+
+inherit_from:
+  - .rubocop_disabled.yml
+  - .rubocop_enabled.yml
+  - .rubocop_local.yml

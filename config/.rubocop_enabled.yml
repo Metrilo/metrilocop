@@ -1,0 +1,27 @@
+Metrics/LineLength:
+  Max: 100
+  Enabled: true
+
+Style/CollectionMethods:
+  Description: 'Preferred collection methods.'
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#map-find-select-reduce-size'
+  Enabled: true
+
+Style/SymbolArray:
+  Description: 'Use %i or %I for arrays of symbols.'
+  Enabled: true
+
+Layout/IndentArray:
+  EnforcedStyle: consistent
+  Enabled: true
+
+Layout/IndentHash:
+  EnforcedStyle: consistent
+  Enabled: true
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+  Enabled: true
+
+Style/Lambda:
+  EnforcedStyle: literal
