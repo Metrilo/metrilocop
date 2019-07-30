@@ -1,0 +1,16 @@
+{
+  "name": "metrilocop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "ember-template-lint": "^1.4.0",
+    "eslint": "^6.1.0",
+    "stylelint": "^10.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
