@@ -11,11 +11,11 @@ Style/SymbolArray:
   Description: 'Use %i or %I for arrays of symbols.'
   Enabled: true
 
-Layout/IndentArray:
+Layout/IndentFirstArrayElement:
   EnforcedStyle: consistent
   Enabled: true
 
-Layout/IndentHash:
+Layout/IndentFirstHashElement:
   EnforcedStyle: consistent
   Enabled: true
 

@@ -12,5 +12,8 @@
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "eslint-config-standard": "^13.0.1"
+  }
 }
