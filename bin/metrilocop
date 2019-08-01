@@ -2,7 +2,8 @@
 
 set -e
 
-dir="$(dirname $(dirname "$0"))"
+current_dir=$(dirname "$0")
+dir="$(dirname $current_dir)"
 source_dir="$PWD"
 rubocop_bin_dir=$dir/bin
 node_bin_dir=$dir/node_modules/.bin
