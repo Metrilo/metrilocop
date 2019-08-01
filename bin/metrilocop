@@ -2,5 +2,10 @@
 
 bin_dir = File.expand_path(File.dirname(__FILE__))
 script = File.join(bin_dir, 'lint')
+setup = File.join(bin_dir, 'setup')
 
-exec script, *ARGV
+if ARGV.join == 'install'
+  exec setup
+else
+  exec script, *ARGV
+end
