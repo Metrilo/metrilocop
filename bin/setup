@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
-set -euo pipefail
-IFS=$'\n\t'
-set -vx
+dir="$(dirname $(dirname "$0"))"
+
+cd $dir
 
 bundle install
 npm install
+
+cd "$PWD"
