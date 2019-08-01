@@ -19,7 +19,7 @@ Gem::Specification.new do |gem|
   end
   gem.bindir        = "bin"
   gem.executables   = gem.files.grep(%r{^bin/}) { |f| File.basename(f) }
-  gem.version       = Git::Whistles::VERSION
+  gem.version       = Metrilocop::VERSION
   gem.require_paths = ["lib"]
 
   gem.add_development_dependency "bundler", "~> 2.0"
