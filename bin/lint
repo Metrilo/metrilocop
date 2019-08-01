@@ -2,8 +2,6 @@
 
 set -e
 
-echo 'debug:' $@
-
 current_dir=$(dirname "$0")
 dir="$(dirname $current_dir)"
 source_dir="$PWD"
