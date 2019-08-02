@@ -95,7 +95,7 @@ run_linter() {
         report_start "$name" ${files[@]}
 
         if ($linter ${files[@]}) ; then
-            if "$name" = 'Rubocop' ; then
+            if [ "$name" = 'Rubocop' ] ; then
                 echo
             else
                 report_success ${files[@]}
