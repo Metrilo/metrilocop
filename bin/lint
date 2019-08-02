@@ -76,9 +76,11 @@ ember_template_lint() {
 stylelint() {
     if [ $JENKINS_BUILD ]; then
         $node_bin_dir/stylelint $@ \
+            --config $config/.stylelintrc.json \
             --custom-formatter=./node_modules/stylelint-checkstyle-formatter > ../checkstyle-stylelint.xml
     else
-        $node_bin_dir/stylelint $@
+        $node_bin_dir/stylelint $@ \
+            --config $config/.stylelintrc.json
     fi
 }
 
@@ -90,10 +92,10 @@ run_linter() {
 
     if [ ${#files[@]} -gt 0 ]; then
         cd $lint_dir
-        report_start $name ${files[@]}
+        report_start "$name" ${files[@]}
 
         if ($linter ${files[@]}) ; then
-            if [ $name = 'Rubocop' ]; then
+            if "$name" = 'Rubocop' ; then
                 echo
             else
                 report_success ${files[@]}
