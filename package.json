@@ -2,11 +2,6 @@
   "name": "metrilocop",
   "version": "1.0.0",
   "main": "index.js",
-  "dependencies": {
-    "ember-template-lint": "^1.4.0",
-    "eslint": "^6.1.0",
-    "stylelint": "^10.1.0"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,11 +9,18 @@
   "license": "MIT",
   "description": "A collection of Metrilo's linters",
   "repository": "github:Metrilo/metrilocop",
+  "dependencies": {},
   "devDependencies": {
-    "eslint-config-standard": "^13.0.1",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-node": "^9.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.0"
+    "eslint": "^4.3.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "ember-template-lint": "^1.4.0",
+    "stylelint": "^8.0.0",
+    "stylelint-checkstyle-formatter": "^0.1.0",
+    "stylelint-config-standard": "^17.0.0",
+    "ajv": "^5.0.0"
   }
 }

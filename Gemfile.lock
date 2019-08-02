@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    metrilocop (0.6.4)
+    metrilocop (0.7.0)
       rubocop
       rubocop-checkstyle_formatter
       rubocop-rspec
