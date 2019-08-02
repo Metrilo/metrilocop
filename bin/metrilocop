@@ -1,11 +1,11 @@
 #!/usr/bin/env ruby
 
 bin_dir = File.expand_path(File.dirname(__FILE__))
-script = File.join(bin_dir, 'lint')
-setup = File.join(bin_dir, 'setup')
+lint = File.join(bin_dir, 'lint')
+install = File.join(bin_dir, 'install')
 
 if ARGV.join == 'install'
-  exec setup
+  exec install
 else
-  exec script, *ARGV
+  exec lint, *ARGV
 end
