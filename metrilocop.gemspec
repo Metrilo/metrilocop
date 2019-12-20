@@ -24,7 +24,7 @@ Gem::Specification.new do |gem|
 
   gem.add_development_dependency "bundler", "~> 2.0"
 
-  gem.add_dependency 'rubocop'
+  gem.add_dependency 'rubocop', '~> 0.62.0'
   gem.add_dependency 'rubocop-checkstyle_formatter'
   gem.add_dependency 'rubocop-rspec'
 end
