@@ -29,24 +29,17 @@ for filename in $@; do
     fi
 
     if [ $extension = 'js' ] ; then
-        eslint_files+=(${filename#frontend/})
+        eslint_files+=($filename)
     fi
 
     if [ $extension = 'hbs' ] ; then
-        ember_template_files+=(${filename#frontend/})
+        ember_template_files+=($filename)
     fi
 
     if [ $extension = 'css' ] || [ $extension = 'scss' ] ; then
         stylelint_files+=($filename)
     fi
 done
-
-report_start () {
-    echo "Metrilocop: Running $1 on ${@:2}"
-}
-report_success () {
-    echo -e "${#files[*]} files inspected, ${GREEN}no offenses${NOCOLOR} detected\n"
-}
 
 rubocop() {
     $rubocop_bin_dir/rubocop \
@@ -87,18 +80,17 @@ stylelint() {
 run_linter() {
     name=$1
     linter=$2
-    lint_dir=$3
-    files=(${@:4})
+    files=(${@:3})
 
     if [ ${#files[@]} -gt 0 ]; then
-        cd $lint_dir
-        report_start "$name" ${files[@]}
+        cd $source_dir
+        echo "Metrilocop: Running $name on ${files[@]}"
 
         if ($linter ${files[@]}) ; then
             if [ "$name" = 'Rubocop' ] ; then
                 echo
             else
-                report_success ${files[@]}
+                echo -e "${#files[*]} files inspected, ${GREEN}no offenses${NOCOLOR} detected\n"
             fi
         else
             exit
@@ -108,7 +100,7 @@ run_linter() {
     fi
 }
 
-run_linter 'Rubocop' 'rubocop' $source_dir ${rubocop_files[@]}
-run_linter 'ESLint' 'eslint' $source_dir/frontend ${eslint_files[@]}
-run_linter 'Ember Template Lint' 'ember_template_lint' $source_dir/frontend ${ember_template_files[@]}
-run_linter 'Stylelint' 'stylelint' $source_dir ${stylelint_files[@]}
+run_linter 'Rubocop' 'rubocop' ${rubocop_files[@]}
+run_linter 'ESLint' 'eslint' ${eslint_files[@]}
+run_linter 'Ember Template Lint' 'ember_template_lint' ${ember_template_files[@]}
+run_linter 'Stylelint' 'stylelint' ${stylelint_files[@]}
