@@ -2,8 +2,5 @@
 dir="$(dirname $(dirname "$0"))"
 
 cd $dir
-
-bundle install
-npm install
-
+yarn install
 cd "$PWD"
