@@ -22,6 +22,8 @@ Gem::Specification.new do |gem|
   gem.version       = Metrilocop::VERSION
   gem.require_paths = ["lib"]
 
+  gem.post_install_message = 'Please run `bundle install metrilocop` in order to install required frontend dependencies'
+
   gem.add_development_dependency "bundler", "~> 2.0"
 
   gem.add_dependency 'rubocop', '~> 0.62.0'
