@@ -22,7 +22,7 @@ Gem::Specification.new do |gem|
   gem.version       = Metrilocop::VERSION
   gem.require_paths = ["lib"]
 
-  gem.post_install_message = 'Please run `bundle install metrilocop` in order to install required frontend dependencies'
+  gem.post_install_message = 'Please run `bundle exec metrilocop install` in order to install required frontend dependencies'
 
   gem.add_development_dependency "bundler", "~> 2.0"
 
