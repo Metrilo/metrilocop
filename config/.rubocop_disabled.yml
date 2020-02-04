@@ -32,9 +32,6 @@ Style/Documentation:
 Style/FrozenStringLiteralComment:
   Enabled: false
 
-Style/LineEndConcatenation:
-  Enabled: false
-
 Style/TrailingCommaInArrayLiteral:
   Enabled: false
 
@@ -44,24 +41,9 @@ Style/TrailingCommaInHashLiteral:
 Style/TrailingCommaInArguments:
   Enabled: false
 
-Style/FormatString:
-  Enabled: false
-
-Lint/AmbiguousBlockAssociation:
-  Enabled: false
-
-Layout/SpaceInsideRangeLiteral:
-  Enabled: false
-
-Layout/AlignHash:
-  Enabled: false
-
 # RuboCop RSpec
 
 RSpec/ExampleLength:
-  Enabled: false
-
-RSpec/LetSetup:
   Enabled: false
 
 RSpec/NamedSubject:
@@ -74,15 +56,6 @@ RSpec/NestedGroups:
   Enabled: false
 
 RSpec/MultipleExpectations:
-  Enabled: false
-
-RSpec/BeforeAfterAll:
-  Enabled: false
-
-RSpec/DescribeClass:
-  Enabled: false
-
-RSpec/ExpectChange:
   Enabled: false
 
 RSpec/ContextWording:

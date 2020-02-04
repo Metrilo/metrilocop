@@ -11,11 +11,11 @@ Style/SymbolArray:
   Description: 'Use %i or %I for arrays of symbols.'
   Enabled: true
 
-Layout/IndentArray:
+Layout/FirstArrayElementIndentation:
   EnforcedStyle: consistent
   Enabled: true
 
-Layout/IndentHash:
+Layout/FirstHashElementIndentation:
   EnforcedStyle: consistent
   Enabled: true
 
@@ -25,3 +25,9 @@ Layout/MultilineMethodCallIndentation:
 
 Style/Lambda:
   EnforcedStyle: literal
+
+# RuboCop RSpec
+
+RSpec/ExpectChange:
+  EnforcedStyle: method_call
+  Enabled: true
