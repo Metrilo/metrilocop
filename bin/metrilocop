@@ -3,9 +3,12 @@
 bin_dir = File.expand_path(File.dirname(__FILE__))
 lint = File.join(bin_dir, 'lint')
 install = File.join(bin_dir, 'install')
+uninstall = File.join(bin_dir, 'uninstall')
 
 if ARGV.join == 'install'
   exec install
+elsif ARGV.join == 'uninstall'
+  exec uninstall
 else
   exec lint, *ARGV
 end

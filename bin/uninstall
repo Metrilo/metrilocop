@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+dir="$(dirname $(dirname "$0"))"
+
+cd $dir
+rm -rf node_modules/
+yarn cache clean
+cd "$PWD"
