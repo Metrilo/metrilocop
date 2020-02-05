@@ -1,5 +1,17 @@
-Metrics/LineLength:
+Layout/LineLength:
   Max: 100
+  Enabled: true
+
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+  Enabled: true
+
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+  Enabled: true
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
   Enabled: true
 
 Style/CollectionMethods:
@@ -9,18 +21,6 @@ Style/CollectionMethods:
 
 Style/SymbolArray:
   Description: 'Use %i or %I for arrays of symbols.'
-  Enabled: true
-
-Layout/IndentArray:
-  EnforcedStyle: consistent
-  Enabled: true
-
-Layout/IndentHash:
-  EnforcedStyle: consistent
-  Enabled: true
-
-Layout/MultilineMethodCallIndentation:
-  EnforcedStyle: indented
   Enabled: true
 
 Style/Lambda:
