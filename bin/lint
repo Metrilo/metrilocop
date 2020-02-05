@@ -41,12 +41,18 @@ for filename in $@; do
 done
 
 rubocop() {
-    $rubocop_bin_dir/rubocop $@ \
-        --require rubocop/formatter/checkstyle_formatter \
-        --config $config/.rubocop.yml \
-        --format progress \
-        --format RuboCop::Formatter::CheckstyleFormatter -o checkstyle-rubocop.xml \
-        --force-exclusion
+    if [ $JENKINS_BUILD ]; then
+        $rubocop_bin_dir/rubocop $@ \
+            --config $config/.rubocop.yml \
+            --force-exclusion \
+            --require rubocop/formatter/checkstyle_formatter \
+            --format RuboCop::Formatter::CheckstyleFormatter -o $source_dir/checkstyle-rubocop.xml
+    else
+        $rubocop_bin_dir/rubocop $@ \
+            --config $config/.rubocop.yml \
+            --force-exclusion \
+            --format progress
+    fi
 }
 
 eslint() {
@@ -56,7 +62,7 @@ eslint() {
             --resolve-plugins-relative-to $dir/node_modules \
             --no-error-on-unmatched-pattern \
             --format checkstyle \
-            --output-file ../checkstyle-eslint.xml
+            --output-file $source_dir/checkstyle-eslint.xml
     else
         $node_bin_dir/eslint $@ \
             --config $config/.eslintrc.json \
@@ -73,7 +79,7 @@ stylelint() {
     if [ $JENKINS_BUILD ]; then
         $node_bin_dir/stylelint $@ \
             --config $config/.stylelintrc.json \
-            --custom-formatter=$dir/node_modules/stylelint-checkstyle-formatter > ../checkstyle-stylelint.xml
+            --custom-formatter=$dir/node_modules/stylelint-checkstyle-formatter > $source_dir/checkstyle-stylelint.xml
     else
         $node_bin_dir/stylelint $@ \
             --config $config/.stylelintrc.json
