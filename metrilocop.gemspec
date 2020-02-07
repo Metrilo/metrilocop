@@ -18,7 +18,7 @@ Gem::Specification.new do |gem|
     `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   end
   gem.bindir        = "bin"
-  gem.executables   = "metrilocop"
+  gem.executables   = ["metrilocop"]
   gem.version       = Metrilocop::VERSION
   gem.require_paths = ["lib"]
 
