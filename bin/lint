@@ -35,7 +35,9 @@ for filename in $@; do
         ember_template_files+=($filename)
     fi
 
-    if [ $extension = 'css' ] || [ $extension = 'scss' ] ; then
+    # Stylelint here is stylelint-config-standard (CSS only) and rejects SCSS
+    # at-rules such as @mixin/@include; lint plain .css, leave .scss to Sass.
+    if [ $extension = 'css' ] ; then
         stylelint_files+=($filename)
     fi
 done
